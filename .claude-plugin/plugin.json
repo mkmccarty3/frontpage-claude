@@ -1,0 +1,17 @@
+{
+  "name": "frontpage",
+  "version": "0.4.0-beta.2",
+  "description": "Read and edit eligible Frontpage websites, then review the matching preview. Publishing stays in Frontpage.",
+  "author": {
+    "name": "Frontpage",
+    "email": "support@frontpage.host"
+  },
+  "homepage": "https://frontpage.host",
+  "license": "MIT",
+  "keywords": [
+    "frontpage",
+    "website",
+    "astro",
+    "mcp"
+  ]
+}

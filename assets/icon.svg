@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Frontpage icon mark — Phase 2.6.A T.6 (interim, refined in B.3).
+  A rounded square in deep neutral with a stylized "F" cut out.
+  Used as favicon (SVG), apple-touch-icon source, and OG fallback image.
+  64×64 viewBox keeps math simple; SVG scales to any rendered size.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="12" ry="12" fill="#0f1419"/>
+  <!-- Stylized F: top bar + mid bar + descender, in warm off-white -->
+  <path
+    d="M18 14
+       h28
+       v8
+       h-20
+       v8
+       h16
+       v8
+       h-16
+       v16
+       h-8
+       z"
+    fill="#f5f5f4"
+  />
+</svg>

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "frontpage": {
+      "type": "http",
+      "url": "https://app.frontpage.host/api/mcp"
+    }
+  }
+}
