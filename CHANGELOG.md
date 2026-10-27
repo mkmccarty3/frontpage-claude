@@ -1,5 +1,11 @@
 # Release notes
 
+## 0.4.0-beta.6
+
+- Open the package and direct Claude connections to eligible Frontpage customers after owner approval.
+- Keep service 0.4.0, the same 14 tools, source/CRM consent, site plans and roles. Public access does not grant site access or enable production publishing.
+- Add the public release download. Claude connector and plugin submissions remain separate owner actions.
+
 ## 0.4.0-beta.5
 
 - Record the completed hosted-Claude and Inspector tests across all 14 tools, with source and sample-record cleanup.

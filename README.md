@@ -2,13 +2,13 @@
 
 Read and edit existing Frontpage websites through the hosted Frontpage MCP service, then check the preview for the saved revision.
 
-This is a restricted beta package. Public rollout and directory listing have not started. The service may return temporarily unavailable while beta access is off. Frontpage source access requires Scale, or an eligible internal site. Each site's plan and your current role apply to every operation. Installing this package grants no site access by itself.
+This public beta is available to Frontpage accounts with an existing Scale or eligible Internal site. Each site's plan and your current role apply to every operation. Installing this package grants no site access by itself. Claude directory submission is separate; no directory listing is claimed.
 
 Read the [Frontpage setup guide](https://app.frontpage.host/connections/claude-code) for login, permissions, examples, troubleshooting and disconnect. See the [MCP developer guide](https://frontpage.host/developers/mcp), [MCP Server feature page](https://frontpage.host/mcp-server) and [release notes](CHANGELOG.md).
 
 ## Load the package
 
-Extract the release archive into a folder named `frontpage`, then run:
+Download the ZIP from the [beta.6 release](https://github.com/mkmccarty3/frontpage-claude/releases/tag/v0.4.0-beta.6), verify it against SHA256SUMS, and extract it into a folder named `frontpage`, then run:
 
 ```sh
 claude plugin validate --strict ./frontpage
@@ -49,7 +49,7 @@ Use either setup path to avoid duplicate server entries. A browser callback retu
 
 Read access needs viewer membership. Edits need editor/admin membership and a read/edit grant. Selected-site access does not include future sites; account coverage does. All modes retain current site permissions and plans.
 
-People and email require separate `crm:read` / `crm:write` consent. Source-only grants do not share contacts. CRM access defaults to none; existing grants gain nothing. Request the required scopes from the client and approve the matching People/email access explicitly. Management requires an editor role and current plan, permission, version and receipt checks. Never send, enroll or activate without the user's instruction. Read `frontpage_get_crm_docs` first and follow its paging and uncertain-write guidance. These tools remain subject to the existing restricted beta gate; this package does not enable a rollout.
+People and email require separate `crm:read` / `crm:write` consent. Source-only grants do not share contacts. CRM access defaults to none; existing grants gain nothing. Request the required scopes from the client and approve the matching People/email access explicitly. Management requires an editor role and current plan, permission, version and receipt checks. Never send, enroll or activate without the user's instruction. Read `frontpage_get_crm_docs` first and follow its paging and uncertain-write guidance.
 
 MCP does not publish, delete files, create the first site, or access billing, inbox, orders, team administration or vendor credentials. The existing Frontpage CLI has a separate API-key connection and a broader command set.
 
@@ -73,7 +73,7 @@ Text edits allow 20 files, 256 KiB per file and 1 MiB total. Binary writes and d
 
 ## Compatibility and support
 
-The service uses MCP SDK 2.3.1 and stateless Streamable HTTP. Claude Code 2.1.218 passed real OAuth and transport checks, a source edit with its exact ready preview, and sample People/email draft work. On October 27, hosted Claude and official MCP Inspector 2.12.0 each passed all 14 tools: source reads, create/update, exact ready preview, guides, an empty group and an email draft. Temporary pages and sample records were cleaned up without publishing. A separately approved MCP test email reached delivered; that was not part of hosted Claude's test. These samples do not certify every nested People/Mail operation or a public installation. Access remains restricted to approved beta accounts. Codex, ChatGPT, Cursor and Grok need separate OAuth and client tests. No public directory listing exists yet.
+The service uses MCP SDK 2.3.1 and stateless Streamable HTTP. Claude Code 2.1.218 passed real OAuth and transport checks, a source edit with its exact ready preview, and sample People/email draft work. On October 27, hosted Claude and official MCP Inspector 2.12.0 each passed all 14 tools: source reads, create/update, exact ready preview, guides, an empty group and an email draft. Temporary pages and sample records were cleaned up without publishing. A separately approved MCP test email reached delivered; that was not part of hosted Claude's test. These samples do not certify every nested People/Mail operation. Current public-install checks belong in the release record. Codex, ChatGPT, Cursor and Grok need separate OAuth and client tests. No public directory listing exists yet.
 
 See [review cases](review/README.md). [Privacy](https://app.frontpage.host/connections/privacy). Support: [support@frontpage.host](mailto:support@frontpage.host).
 
