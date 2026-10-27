@@ -1,5 +1,10 @@
 # Release notes
 
+## 0.4.0-beta.5
+
+- Record the completed hosted-Claude and Inspector tests across all 14 tools, with source and sample-record cleanup.
+- Keep service 0.4.0, the same remote configuration, tools, permissions and restricted beta. No public listing or full nested-operation coverage is claimed.
+
 ## 0.4.0-beta.4
 
 - Align setup, review cases and agent guidance with all 14 existing tools on service 0.4.0.
