@@ -1,5 +1,17 @@
 # Release notes
 
+## 0.4.0-beta.4
+
+- Align setup, review cases and agent guidance with all 14 existing tools on service 0.4.0.
+- Link the MCP Server feature and developer guide; state separate People/email consent and current client limits.
+- Keep the same endpoint, schemas, permissions and services. No public rollout or untested-client certification is implied.
+
+## 0.4.0-beta.3
+
+- Document the current People and email read/write tools and public operation-guide tool on service version 0.4.0.
+- Explain separate CRM consent, current groups/stages, shared receipts, paging and explicit send/activation instructions. Existing source grants gain no CRM access.
+- Correct the setup guide and skill's blanket CRM exclusion. Preserve the restricted beta, current roles/plans and held rollout. New live OAuth/CRM acceptance remains pending that rollout.
+
 ## 0.4.0-beta.2
 
 - Add the public setup guide, including account coverage, permissions, examples, preview review and troubleshooting.

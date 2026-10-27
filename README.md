@@ -4,7 +4,7 @@ Read and edit existing Frontpage websites through the hosted Frontpage MCP servi
 
 This is a restricted beta package. Public rollout and directory listing have not started. The service may return temporarily unavailable while beta access is off. Frontpage source access requires Scale, or an eligible internal site. Each site's plan and your current role apply to every operation. Installing this package grants no site access by itself.
 
-Read the [Frontpage setup guide](https://app.frontpage.host/connections/claude-code) for login, permissions, examples, troubleshooting and disconnect. See [release notes](CHANGELOG.md) for version changes.
+Read the [Frontpage setup guide](https://app.frontpage.host/connections/claude-code) for login, permissions, examples, troubleshooting and disconnect. See the [MCP developer guide](https://frontpage.host/developers/mcp), [MCP Server feature page](https://frontpage.host/mcp-server) and [release notes](CHANGELOG.md).
 
 ## Load the package
 
@@ -41,10 +41,17 @@ Use either setup path to avoid duplicate server entries. A browser callback retu
 | `frontpage_list_history` | Inspect bounded revision history |
 | `frontpage_get_deploy_status` | Check the exact revision's preview |
 | `frontpage_apply_file_changes` | Save bounded text changes and request a preview |
+| `frontpage_get_crm_docs` | Read current People or Mail operations without customer data |
+| `frontpage_people_read` | Read contacts, groups, stages, rules and activity with CRM read consent |
+| `frontpage_people_write` | Manage People through the shared service with CRM write consent |
+| `frontpage_mail_read` | Read email content, series and delivery history with CRM read consent |
+| `frontpage_mail_write` | Manage email drafts, campaigns and series with CRM write consent |
 
 Read access needs viewer membership. Edits need editor/admin membership and a read/edit grant. Selected-site access does not include future sites; account coverage does. All modes retain current site permissions and plans.
 
-MCP does not publish, delete files, create the first site, or access billing, contacts, inbox, orders, team administration or vendor credentials. The existing Frontpage CLI has a separate API-key connection and a broader command set.
+People and email require separate `crm:read` / `crm:write` consent. Source-only grants do not share contacts. CRM access defaults to none; existing grants gain nothing. Request the required scopes from the client and approve the matching People/email access explicitly. Management requires an editor role and current plan, permission, version and receipt checks. Never send, enroll or activate without the user's instruction. Read `frontpage_get_crm_docs` first and follow its paging and uncertain-write guidance. These tools remain subject to the existing restricted beta gate; this package does not enable a rollout.
+
+MCP does not publish, delete files, create the first site, or access billing, inbox, orders, team administration or vendor credentials. The existing Frontpage CLI has a separate API-key connection and a broader command set.
 
 ## Review and disconnect
 
@@ -66,7 +73,7 @@ Text edits allow 20 files, 256 KiB per file and 1 MiB total. Binary writes and d
 
 ## Compatibility and support
 
-The service uses MCP SDK 2.3.1 and stateless Streamable HTTP. Claude Code 2.1.218 passed real OAuth and transport checks. The production SDK client passed source/edit/preview/refresh/revoke checks. An actual Claude Code Sonnet run read and edited one temporary page, requested status for its saved revision, and the exact preview reached ready. The test restored source and plan afterward. Package validation alone does not certify other workflows. Other clients and hosted Claude surfaces need their own acceptance tests.
+The service uses MCP SDK 2.3.1 and stateless Streamable HTTP. Claude Code 2.1.218 passed real OAuth and transport checks. The production SDK client passed source/edit/preview/refresh/revoke checks. An actual Claude Code Sonnet run read and edited one temporary page, requested status for its saved revision, and the exact preview reached ready. The test restored source and plan afterward. Package validation alone does not certify other workflows. Hosted Claude passed OAuth, discovery and site/file-list metadata only on October 21; full current-tool hosted acceptance remains pending. Codex, ChatGPT, Cursor and Grok are planned integrations, with separate OAuth compatibility and acceptance work. No public directory listing exists yet.
 
 See [review cases](review/README.md). [Privacy](https://app.frontpage.host/connections/privacy). Support: [support@frontpage.host](mailto:support@frontpage.host).
 

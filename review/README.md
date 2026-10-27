@@ -15,3 +15,15 @@ Record package version/hash, client version, server release, account coverage mo
 A first-time user must finish Frontpage's normal signup/profile/site setup. MCP does not create that first site. Account-wide coverage can include future eligible sites without a new grant, but cannot bypass any site's current plan or membership.
 
 Required before release: actual named-client edit/preview acceptance, clean install, failure matrix, working support/alerts, owner review and controlled beta approval. Provider submission and hosted-client certification remain separate steps.
+
+## People and email acceptance
+
+These five existing tools need their own current-release acceptance: `frontpage_get_crm_docs`, `frontpage_people_read`, `frontpage_people_write`, `frontpage_mail_read` and `frontpage_mail_write`. Source-only consent must deny CRM reads and writes. CRM read-only consent must deny writes. CRM write access still requires the site's eligible plan and editor role.
+
+Use only owner-approved sample records. Page both public operation guides to completion; list sample People groups, create a clearly named temporary manual group with a stable request key, read it back, replay the identical request, then archive it. Read mail drafts; save a clearly named temporary draft with `save_mail_editor`, read it back, replay the same save key/payload and soft-delete only that draft. Neither flow may send, activate a rule or enroll anyone. Confirm no duplicate record exists.
+
+A real send, scheduling or activation test needs a separately approved recipient and sample audience. Do not send to a customer's address or claim delivery from provider acceptance. Record untested operations explicitly. Fourteen successful tool calls do not prove every operation inside the People/email tools.
+
+## Private reviewer login
+
+Frontpage supplies the dedicated review account and password through the provider's private credential fields. Open `https://app.frontpage.host/auth/reviewer`, sign in, then start the normal OAuth connection. The review account has ordinary Editor access only to the prepared sample site. Normal plan, membership, consent, revision and send restrictions apply; the login grants no administrative bypass. Keep the password out of issues, recordings and this repository.
