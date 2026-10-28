@@ -1,7 +1,7 @@
 {
   "name": "frontpage",
-  "version": "0.4.0-beta.6",
-  "description": "Read and edit eligible Frontpage websites, check previews, and use People and email tools with separate consent. Publish in Frontpage.",
+  "version": "0.5.1",
+  "description": "Read and edit eligible Frontpage sites, check previews, and use People, email and business tools with separate consent. Publish in Frontpage.",
   "author": {
     "name": "Frontpage",
     "email": "support@frontpage.host"

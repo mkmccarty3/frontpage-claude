@@ -27,3 +27,7 @@ A real send, scheduling or activation test needs a separately approved recipient
 ## Private reviewer login
 
 Frontpage supplies the dedicated review account and password through the provider's private credential fields. Open `https://app.frontpage.host/auth/reviewer`, sign in, then start the normal OAuth connection. The review account has ordinary Editor access only to the prepared sample site. Normal plan, membership, consent, revision and send restrictions apply; the login grants no administrative bypass. Keep the password out of issues, recordings and this repository.
+
+## Analytics read acceptance
+
+With separate business-read consent, compare `frontpage_analytics_dashboard` and `frontpage_analytics_page_detail` against the existing UI services using the same fixed range, exact path and audience filters. Verify read continuations keep the returned version/readAt, missing consent and an unselected site deny, and revoked tokens stop working. These reports change no source or customer records. Raw SQL remains absent from discovery and execution. See https://frontpage.host/developers/analytics for metric definitions and known top-N limits.

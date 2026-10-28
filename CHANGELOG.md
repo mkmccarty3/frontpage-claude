@@ -1,5 +1,11 @@
 # Release notes
 
+## 0.5.1
+
+- Document the existing dashboard and new single-page analytics report on service 0.7.0, with business-read consent and unchanged metric calculations.
+- Link shared metric definitions, preserve read continuations and explain that raw SQL remains excluded from MCP.
+- Keep endpoint, OAuth choices, source/CRM behavior, roles, eligibility and browser-only publishing unchanged. No new directory approval is claimed.
+
 ## 0.4.0-beta.6
 
 - Open the package and direct Claude connections to eligible Frontpage customers after owner approval.

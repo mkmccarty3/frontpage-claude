@@ -8,7 +8,7 @@ Read the [Frontpage setup guide](https://app.frontpage.host/connections/claude-c
 
 ## Load the package
 
-Download the ZIP from the [beta.6 release](https://github.com/mkmccarty3/frontpage-claude/releases/tag/v0.4.0-beta.6), verify it against SHA256SUMS, and extract it into a folder named `frontpage`, then run:
+Download the ZIP from the [0.5.1 release](https://github.com/mkmccarty3/frontpage-claude/releases/tag/v0.5.1), verify it against SHA256SUMS, and extract it into a folder named `frontpage`, then run:
 
 ```sh
 claude plugin validate --strict ./frontpage
@@ -51,7 +51,7 @@ Read access needs viewer membership. Edits need editor/admin membership and a re
 
 People and email require separate `crm:read` / `crm:write` consent. Source-only grants do not share contacts. CRM access defaults to none; existing grants gain nothing. Request the required scopes from the client and approve the matching People/email access explicitly. Management requires an editor role and current plan, permission, version and receipt checks. Never send, enroll or activate without the user's instruction. Read `frontpage_get_crm_docs` first and follow its paging and uncertain-write guidance.
 
-MCP does not publish, delete files, create the first site, or access billing, inbox, orders, team administration or vendor credentials. The existing Frontpage CLI has a separate API-key connection and a broader command set.
+MCP does not publish, delete files, create the first site, or access billing, team administration or vendor credentials. Private inbox/order reads require separate business consent. The existing Frontpage CLI has a separate API-key connection and a broader command set.
 
 ## Review and disconnect
 
@@ -80,3 +80,38 @@ See [review cases](review/README.md). [Privacy](https://app.frontpage.host/conne
 The MIT license covers only this integration package. The hosted service and Frontpage application remain separate. The icon identifies Frontpage; the license grants no endorsement or trademark rights.
 
 Build sources follow [Anthropic's plugin manifest reference](https://code.claude.com/docs/en/plugins-reference) and [remote MCP setup](https://code.claude.com/docs/en/mcp). Validate against the client version you will ship.
+
+
+## Business permissions
+
+This release adds separate optional business read/manage permissions for
+analytics, usage, forms/inbox, Store, Support and task/routine records. Source
+and People/email permissions stay separate. Existing grants gain nothing;
+reconnect and explicitly select the business access you want. Both choices
+start off. Your current role and each site's eligible plan still apply.
+
+Management can change the running catalog/form settings and send Support
+replies, guidance or retries on your instruction. Payments stays read-only.
+Website task start/retry, routine create/edit/run/resume, financial/account/
+credential changes and unfinished Booking are excluded. Cancel and pause do
+not start work. Public setup and limits: https://frontpage.host/developers/mcp.
+
+Client packages contain only settings and guidance. They use the same hosted
+MCP/OAuth services; no CLI, customer editor or internal agent changes are needed.
+
+## Analytics reports
+
+With business:read consent, use `frontpage_analytics_dashboard` for the existing
+site-wide UI report and `frontpage_analytics_page_detail` with an exact `path`
+for one page. The page report includes views, visitors, sessions, time/scroll,
+trends, sources, next pages, audience, frustration, errors and performance.
+Use days 1/7/30/90 (default 30), or both from and to. Page filters are device,
+country, source, referrer, os and browser; path is a separate field. Retain
+readAt, range, filters and version on continuations. Sparse samples remain null.
+
+The existing query, summary, timeseries, funnel and compare tools remain. Filter
+type=pageview for view counts. A funnel measures session overlap, not event
+order. Raw SQL is unavailable through MCP. UI View all pagination and complete
+labeled-click reporting remain separate coverage limits. Shared definitions:
+https://frontpage.host/developers/analytics. MCP setup/tool limits:
+https://frontpage.host/developers/mcp.
