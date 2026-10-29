@@ -1,5 +1,12 @@
 # Release notes
 
+## 0.6.0
+
+- Document six named website management tools and one expanded edit choice.
+- Old grants retain their permissions. Source saves still do not auto-publish.
+- Keep the same hosted service, roles, plans and package-only license. Marketplace review remains separate.
+
+
 ## 0.5.1
 
 - Document the existing dashboard and new single-page analytics report on service 0.7.0, with business-read consent and unchanged metric calculations.

@@ -8,7 +8,7 @@ Read the [Frontpage setup guide](https://app.frontpage.host/connections/claude-c
 
 ## Load the package
 
-Download the ZIP from the [0.5.1 release](https://github.com/mkmccarty3/frontpage-claude/releases/tag/v0.5.1), verify it against SHA256SUMS, and extract it into a folder named `frontpage`, then run:
+Download the ZIP from the [0.6.0 release](https://github.com/mkmccarty3/frontpage-claude/releases/tag/v0.6.0), verify it against SHA256SUMS, and extract it into a folder named `frontpage`, then run:
 
 ```sh
 claude plugin validate --strict ./frontpage
@@ -51,11 +51,11 @@ Read access needs viewer membership. Edits need editor/admin membership and a re
 
 People and email require separate `crm:read` / `crm:write` consent. Source-only grants do not share contacts. CRM access defaults to none; existing grants gain nothing. Request the required scopes from the client and approve the matching People/email access explicitly. Management requires an editor role and current plan, permission, version and receipt checks. Never send, enroll or activate without the user's instruction. Read `frontpage_get_crm_docs` first and follow its paging and uncertain-write guidance.
 
-MCP does not publish, delete files, create the first site, or access billing, team administration or vendor credentials. Private inbox/order reads require separate business consent. The existing Frontpage CLI has a separate API-key connection and a broader command set.
+MCP can publish/unpublish, delete selected source files/articles, remove redirects and restore source only with expanded Read and manage websites consent. Old edit-only grants do not gain these actions. MCP does not create the first site or access billing, team administration or vendor credentials. Private inbox/order reads require separate business consent. The existing Frontpage CLI has a separate API-key connection and a broader command set.
 
 ## Review and disconnect
 
-A saved revision may still be building. Wait for that exact revision to report ready, then open its preview link. Browser sign-in may be required. Review and publish in Frontpage.
+A saved revision may still be building. Wait for that exact revision to report ready, then open its preview link. Browser sign-in may be required. Publish only on explicit instruction with expanded management consent, or review and publish in Frontpage.
 
 Manage grants at [Workspace → Developers → Connected Apps](https://app.frontpage.host/workspace/account/developers#connected-apps). Expand Connection details to remove one connection, or disconnect the app to stop all its active connections. Signing out, uninstalling the plugin or removing a local server entry does not revoke a grant.
 
@@ -115,3 +115,15 @@ order. Raw SQL is unavailable through MCP. UI View all pagination and complete
 labeled-click reporting remain separate coverage limits. Shared definitions:
 https://frontpage.host/developers/analytics. MCP setup/tool limits:
 https://frontpage.host/developers/mcp.
+
+## Website management update
+
+The six named website actions use expanded Read and manage websites consent. Existing grants stay unchanged until reauthorization. Read current site status for the publication version; publish only the exact reviewed ready build. Unpublish and article deletion require Admin. Redirect removal also requires existing Manage site settings consent. Source deletion and restore build previews without publishing. Normal client approval, roles, plan restrictions, current revisions and retry receipts apply. See https://frontpage.host/developers/mcp. This package update does not claim a new marketplace review or approval.
+
+
+Publication tools affect the configured custom domain. A public Frontpage
+subdomain continues to serve its preview under the existing visibility setting;
+unpublish does not hide it. Sites without a custom domain return
+NO_PUBLISHED_SURFACE. Changing subdomain visibility stays in the existing
+Frontpage browser flow. Status reports the publication surface and whether a
+custom domain is configured; a saved source revision is not a privacy change.
