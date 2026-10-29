@@ -1,5 +1,11 @@
 # Release notes
 
+## 0.6.1
+
+- Use Rostra Labs, Inc. as author and the current purple Frontpage mark.
+- Describe website, People/email, Articles, Support and analytics workflows.
+- Keep the hosted service, permissions and product behavior unchanged. Marketplace approval remains separate.
+
 ## 0.6.0
 
 - Document six named website management tools and one expanded edit choice.

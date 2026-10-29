@@ -1,9 +1,9 @@
 {
   "name": "frontpage",
-  "version": "0.6.0",
-  "description": "Read and manage eligible Frontpage websites, check exact previews, and use People, email and business tools with separate consent.",
+  "version": "0.6.1",
+  "description": "Manage existing Frontpage websites, email marketing, People CRM, articles, AI support and analytics through the hosted MCP service.",
   "author": {
-    "name": "Frontpage",
+    "name": "Rostra Labs, Inc.",
     "email": "support@frontpage.host"
   },
   "homepage": "https://frontpage.host",

@@ -1,6 +1,6 @@
 # Frontpage for Claude Code
 
-Read and edit existing Frontpage websites through the hosted Frontpage MCP service, then check the preview for the saved revision.
+Manage your existing Frontpage website, email marketing, People CRM, articles, AI customer support and analytics through the hosted MCP service. Choose the access your AI can use; review changes before publishing or sending.
 
 This public beta is available to Frontpage accounts with an existing Scale or eligible Internal site. Each site's plan and your current role apply to every operation. Installing this package grants no site access by itself. Claude directory submission is separate; no directory listing is claimed.
 
@@ -8,7 +8,7 @@ Read the [Frontpage setup guide](https://app.frontpage.host/connections/claude-c
 
 ## Load the package
 
-Download the ZIP from the [0.6.0 release](https://github.com/mkmccarty3/frontpage-claude/releases/tag/v0.6.0), verify it against SHA256SUMS, and extract it into a folder named `frontpage`, then run:
+Download the ZIP from the [0.6.1 release](https://github.com/mkmccarty3/frontpage-claude/releases/tag/v0.6.1), verify it against SHA256SUMS, and extract it into a folder named `frontpage`, then run:
 
 ```sh
 claude plugin validate --strict ./frontpage
@@ -28,7 +28,10 @@ claude mcp login frontpage
 
 Use either setup path to avoid duplicate server entries. A browser callback returns to the local client that started the login. Keep codes, tokens and callback URLs private.
 
-## Available tools
+## Representative tools
+
+The current native catalog has 136 tools. These common tools are a starting
+point; the sections below and public MCP guide cover the broader catalog.
 
 | Tool | Purpose |
 |---|---|
@@ -127,3 +130,12 @@ unpublish does not hide it. Sites without a custom domain return
 NO_PUBLISHED_SURFACE. Changing subdomain visibility stays in the existing
 Frontpage browser flow. Status reports the publication surface and whether a
 custom domain is configured; a saved source revision is not a privacy change.
+
+
+## Publisher and directory availability
+
+Frontpage is the product. Rostra Labs, Inc. publishes this package; support is
+support@frontpage.host. The current server has 136 native tools. Marketplace
+review and public publication are separate from this package release and direct
+MCP setup. Use the current advertised schemas and your approved permissions.
+Booking and unattended website-agent execution remain outside MCP.
