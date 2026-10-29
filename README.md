@@ -8,7 +8,7 @@ Read the [Frontpage setup guide](https://app.frontpage.host/connections/claude-c
 
 ## Load the package
 
-Download the ZIP from the [0.6.1 release](https://github.com/mkmccarty3/frontpage-claude/releases/tag/v0.6.1), verify it against SHA256SUMS, and extract it into a folder named `frontpage`, then run:
+Download the ZIP from the [0.6.2 release](https://github.com/mkmccarty3/frontpage-claude/releases/tag/v0.6.2), verify it against SHA256SUMS, and extract it into a folder named `frontpage`, then run:
 
 ```sh
 claude plugin validate --strict ./frontpage

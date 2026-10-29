@@ -1,5 +1,10 @@
 # Release notes
 
+## 0.6.2
+
+- Package the approved purple logo as a PNG for the directory image check.
+- Keep strict Claude Code manifest validation and the same remote service.
+
 ## 0.6.1
 
 - Use Rostra Labs, Inc. as author and the current purple Frontpage mark.

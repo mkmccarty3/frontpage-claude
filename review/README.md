@@ -16,6 +16,12 @@ A first-time user must finish Frontpage's normal signup/profile/site setup. MCP 
 
 Required before release: actual named-client edit/preview acceptance, clean install, failure matrix, working support/alerts, owner review and controlled beta approval. Provider submission and hosted-client certification remain separate steps.
 
+## Package and credential checks
+
+The package has no executable server, hook, environment mapping or credential substitution. Its MCP configuration contains only the Frontpage HTTPS endpoint. The client completes Frontpage OAuth and uses the resulting Frontpage token for that endpoint. The skill does not read or forward another service’s credentials. No user-configured API key is needed.
+
+The directory may flag generic credential wording for human review. Check the actual manifest, remote configuration and skill before treating that warning as a data flow. Privacy policy: https://app.frontpage.host/connections/privacy. The supported Claude Code manifest stays compatible with strict CLI validation.
+
 ## People and email acceptance
 
 These five existing tools need their own current-release acceptance: `frontpage_get_crm_docs`, `frontpage_people_read`, `frontpage_people_write`, `frontpage_mail_read` and `frontpage_mail_write`. Source-only consent must deny CRM reads and writes. CRM read-only consent must deny writes. CRM write access still requires the site's eligible plan and editor role.
