@@ -1,5 +1,10 @@
 # Release notes
 
+## 0.6.3
+
+- Remove stale limits that contradicted the shipped website management tools.
+- Explain the native Email series default before creating automation.
+
 ## 0.6.2
 
 - Package the approved purple logo as a PNG for the directory image check.

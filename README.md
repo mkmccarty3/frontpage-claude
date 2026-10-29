@@ -8,7 +8,7 @@ Read the [Frontpage setup guide](https://app.frontpage.host/connections/claude-c
 
 ## Load the package
 
-Download the ZIP from the [0.6.2 release](https://github.com/mkmccarty3/frontpage-claude/releases/tag/v0.6.2), verify it against SHA256SUMS, and extract it into a folder named `frontpage`, then run:
+Download the ZIP from the [0.6.3 release](https://github.com/mkmccarty3/frontpage-claude/releases/tag/v0.6.3), verify it against SHA256SUMS, and extract it into a folder named `frontpage`, then run:
 
 ```sh
 claude plugin validate --strict ./frontpage
@@ -72,7 +72,7 @@ Manage grants at [Workspace → Developers → Connected Apps](https://app.front
 - Rate limit: wait for the supplied retry guidance.
 - Temporarily unavailable: retry later or contact support. Do not send credentials to support.
 
-Text edits allow 20 files, 256 KiB per file and 1 MiB total. Binary writes and deletes are outside this beta. Results use bounded pages and UTF-16 continuation offsets; follow the returned cursor/offset and revision.
+Text edits allow 20 files, 256 KiB per file and 1 MiB total. Source edits accept text only. Small media uses frontpage_upload_media; explicit source deletion requires Read and manage websites consent. Results use bounded pages and UTF-16 continuation offsets; follow the returned cursor/offset and revision.
 
 ## Compatibility and support
 
