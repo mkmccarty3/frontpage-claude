@@ -1,5 +1,14 @@
 # Release notes
 
+## 0.9.0 candidate — held
+
+- Align provider candidates with one hosted server baseline, including native
+  Booking, appointment start intervals and protected screenshot delivery.
+- Preserve current roles, eligible plans, explicit permissions, native Booking
+  rollout and human calendar handoffs. Existing grants gain no access.
+- Prepare local archives only. Marketplace review and publication remain held;
+  this version does not claim that an installed directory catalog has upgraded.
+
 ## 0.6.4
 
 Document the shared appointment start interval, Automatic default, current-rule rescheduling and exact availability selection. No endpoint, scope or runtime change.

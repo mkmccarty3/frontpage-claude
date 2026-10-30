@@ -1,5 +1,10 @@
 # Frontpage for Claude Code
 
+This is the held 0.9.0 candidate for the combined Frontpage MCP release. It
+uses the same hosted service baseline as the Cursor and ChatGPT/Codex
+candidates. The existing public 0.6.4 package and directory reviews remain
+separate; a candidate build does not publish an update.
+
 Manage your existing Frontpage website, email marketing, People CRM, articles, AI customer support and analytics through the hosted MCP service. Choose the access your AI can use; review changes before publishing or sending.
 
 This public beta is available to Frontpage accounts with an existing Scale or eligible Internal site. Each site's plan and your current role apply to every operation. Installing this package grants no site access by itself. Claude directory submission is separate; no directory listing is claimed.
@@ -30,8 +35,9 @@ Use either setup path to avoid duplicate server entries. A browser callback retu
 
 ## Representative tools
 
-The current native catalog has 138 tools. These common tools are a starting
-point; the sections below and public MCP guide cover the broader catalog.
+The current native catalog has 177 tools after renewed Business consent for
+Booking; earlier grants retain 138. These common tools are a starting point;
+the sections below and public MCP guide cover the broader catalog.
 
 | Tool | Purpose |
 |---|---|
