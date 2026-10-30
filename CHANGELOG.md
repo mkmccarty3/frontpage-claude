@@ -1,5 +1,9 @@
 # Release notes
 
+## 0.6.4
+
+Document the shared appointment start interval, Automatic default, current-rule rescheduling and exact availability selection. No endpoint, scope or runtime change.
+
 ## 0.6.3
 
 - Remove stale limits that contradicted the shipped website management tools.
