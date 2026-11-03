@@ -1,17 +1,27 @@
 {
   "name": "frontpage",
-  "version": "0.9.0",
-  "description": "Manage existing Frontpage websites, email marketing, People CRM, articles, AI support and analytics through the hosted MCP service.",
+  "version": "0.14.1",
+  "description": "Manage your Frontpage website, automate email marketing and CRM, publish articles, manage bookings and AI customer support, and review analytics.",
   "author": {
     "name": "Rostra Labs, Inc.",
     "email": "support@frontpage.host"
   },
   "homepage": "https://frontpage.host",
+  "privacyPolicyUrl": "https://app.frontpage.host/connections/privacy",
   "license": "MIT",
   "keywords": [
     "frontpage",
-    "website",
-    "astro",
-    "mcp"
+    "website-management",
+    "email-marketing",
+    "marketing-automation",
+    "crm",
+    "blog-publishing",
+    "customer-support",
+    "website-analytics",
+    "seo",
+    "mcp",
+    "booking",
+    "appointments",
+    "calendar"
   ]
 }

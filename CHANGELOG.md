@@ -1,13 +1,17 @@
 # Release notes
 
-## 0.9.0 candidate — held
+## 0.14.1
 
-- Align provider candidates with one hosted server baseline, including native
-  Booking, appointment start intervals and protected screenshot delivery.
-- Preserve current roles, eligible plans, explicit permissions, native Booking
-  rollout and human calendar handoffs. Existing grants gain no access.
-- Prepare local archives only. Marketplace review and publication remain held;
-  this version does not claim that an installed directory catalog has upgraded.
+- Provide one common 339-tool release for Claude, ChatGPT/Codex, Cursor and
+  Grok setup. Align current Booking setup, calendar editing/disconnect and
+  contact lookup with the existing shared services.
+- Add the standard Astro page example, correct group-count guidance and state
+  tested upload/download/image behavior accurately.
+- Offer the existing optional native-agent permission in package OAuth requests;
+  its consent choice stays unchecked. Keep roles and native safeguards intact.
+- Use Rostra Labs, Inc. and the purple Frontpage logo, with current website,
+  email marketing, CRM, Booking, Support and analytics sales copy.
+- Marketplace availability follows each provider’s review and publication.
 
 ## 0.6.4
 
