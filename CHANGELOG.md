@@ -1,5 +1,14 @@
 # Release notes
 
+## 0.15.0
+
+- Carry first and last names consistently through People, Booking, Payments, email
+  and Support, including compound names and explicit field clearing.
+- Document MCP and existing features on every plan, including Free, with native
+  roles, consent and usage limits.
+- Use the current task attachments contract; keep the same common 339 tools.
+- Preserve the Frontpage title, purple logo and Rostra Labs, Inc. publisher.
+
 ## 0.14.1
 
 - Provide one common 339-tool release for Claude, ChatGPT/Codex, Cursor and
