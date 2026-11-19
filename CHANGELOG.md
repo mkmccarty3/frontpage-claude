@@ -1,5 +1,12 @@
 # Release notes
 
+## 0.16.0
+
+- Include the current 341-tool MCP catalog with stock photo/video search and import.
+- Align file pagination, Store imports, retries and custom-domain plan guidance.
+- Clarify normal Frontpage OAuth sign-in and unavailable-action handling.
+- Keep the same services, permissions, Frontpage title, publisher and purple logo.
+
 ## 0.15.0
 
 - Carry first and last names consistently through People, Booking, Payments, email
